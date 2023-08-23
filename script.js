@@ -5,8 +5,15 @@ const searchInputEl = document.getElementById("search-input");
 const searchResultsEl = document.querySelector(".search-results");
 const showMoreButtonEl = document.getElementById("show-more-button");
 
+let inputData = "";
 
+function searchImages(){
+//get the value from the input field
+inputData = searchInputEl.value;
+console.log(inputData)
 
-formEl.addEventListener("submit", () => {
-console.log("submitted")
+}
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
+  searchImages();
 });
