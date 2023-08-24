@@ -21,6 +21,13 @@ console.log(data)
  if (page === 1) {
  searchResultsEl.innerHTML = "";
 }
+const results = data.results;
+//change the show more btn style
+if (page > 1) {
+  showMoreButtonEl.style.display = "block";
+}
+
+console.log(results)
 }
 
 formEl.addEventListener("submit", (event) => {
