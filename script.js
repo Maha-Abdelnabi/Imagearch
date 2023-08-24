@@ -40,6 +40,8 @@ const results = data.results;
    searchResultsEl.appendChild(imageWrapper);
  });
 
+ //after we get the first result the page num will change and the the btn will appear
+ page++;
 //change the show more btn style
 if (page > 1) {
   showMoreButtonEl.style.display = "block";
@@ -51,5 +53,10 @@ console.log(results)
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   page = 1;
+  searchImages();
+});
+
+
+showMoreButtonEl.addEventListener("click", () => {
   searchImages();
 });
