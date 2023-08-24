@@ -2,7 +2,7 @@
 
 Image Search App
 ## Overview
-The Image Search App is a powerful tool for searching and discovering images from various sources on the web. This application leverages [insert technology/API/platform] to provide a seamless and intuitive image search experience.
+The Image Search App is a powerful tool for searching and discovering images from various sources on the web. This application leverages Unsplash API to provide a seamless and intuitive image search experience.
 
 ![](./assets/search.PNG)
 ![](./assets/search1.PNG)
