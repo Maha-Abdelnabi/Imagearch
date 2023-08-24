@@ -22,6 +22,24 @@ console.log(data)
  searchResultsEl.innerHTML = "";
 }
 const results = data.results;
+//.map to get each elemenet separetly
+ results.map((result) => {
+    //create a div that include the img and description
+   const imageWrapper = document.createElement("div");
+   imageWrapper.classList.add("search-result");
+   const image = document.createElement("img");
+   image.src = result.urls.small;
+   image.alt = result.alt_description;
+   const imageLink = document.createElement("a");
+   imageLink.href = result.links.html;
+   imageLink.target = "_blank";
+   imageLink.textContent = result.alt_description;
+//append the created elements
+   imageWrapper.appendChild(image);
+   imageWrapper.appendChild(imageLink);
+   searchResultsEl.appendChild(imageWrapper);
+ });
+
 //change the show more btn style
 if (page > 1) {
   showMoreButtonEl.style.display = "block";
